@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Configurações Gerais e Resets
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-principal: #1b4332; /* Verde Escuro (Campo) */
+    --cor-secundaria: #2d6a4f; /* Verde Médio */
+    --cor-detalhe: #52b788; /* Verde Tecnológico */
+    --cor-contraste: #00b4d8; /* Azul Tech */
+    --cor-fundo-claro: #f8f9fa;
+    --cor-texto-escuro: #212529;
+    --cor-texto-claro: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Cabeçalho (Navbar)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--cor-principal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: var(--cor-texto-claro);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--cor-detalhe);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-detalhe);
+}
+
+.btn-nav {
+    background-color: var(--cor-detalhe);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600 !important;
+    color: var(--cor-principal) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-principal) !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Banner Principal (Hero Section)
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.7)), 
+                url('https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: var(--cor-texto-claro);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--cor-detalhe);
+    color: var(--cor-principal);
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(82, 183, 136, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-contraste);
+    color: var(--cor-texto-claro);
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Seção de Tecnologias (Cards)
+   ========================================================================== */
+.features-section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 36px;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--cor-texto-claro);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid var(--cor-contraste);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #495057;
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 3px solid var(--cor-detalhe);
+}
+
+footer p {
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Responsividade (Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .features-section {
+        padding: 60px 4%;
+    }
+}
